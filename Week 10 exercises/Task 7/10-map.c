@@ -54,7 +54,7 @@ struct Assoc *Map_find(struct Map *map, char *key) {
     size_t h = stringHash(key) % map->size;
     struct Assoc *current = map->assocs[h];
     while (current) {
-        if (strcmp(current->key, key) == 0){
+        if (strcmp(current->key, key) == 0) {
             return current;
         }
         current = current->next;
@@ -86,7 +86,7 @@ void Map_remove(struct Map *map, char *key) {
     struct Assoc *current = map->assocs[h];
     struct Assoc *prev = 0;
     while (current) {
-        if (strcmp(current->key, key) == 0){
+        if (strcmp(current->key, key) == 0) {
             if (prev) {
                 prev->next = current->next;
             } else {
@@ -173,9 +173,9 @@ int main(int argc, char **argv) {
     // 7. test Map_remove()
 
     Map_remove(map, "all");
-    assert(Map_find(map, "all") == 0);
+    assert(Map_find(map, "all")->value == 0);
     Map_remove(map, "that");
-    assert(Map_find(map, "that") == 0);
+    assert(Map_find(map, "that")->value == 0);
 
     fprintf(stderr, "all tests passed\n");
 
