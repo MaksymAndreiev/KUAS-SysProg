@@ -11,23 +11,25 @@ size_t stringHash(const char *string) {
     size_t hash = 5381;
     int c;
     while ((c = *string++)) {
-            hash = hash * 33 + c;
+        hash = hash * 33 + c;
     }
     return hash;
 }
 
 // 2a) define struct Assoc here
 
-struct Assoc {
-    char *key;
+// 2a) define struct Assoc here
+
+struct Assoc {  // a structure that associates a key with a value
+    char *key; // the key and ...
 };
 
 // 2b) define newAssoc(key) here
 
 struct Assoc *newAssoc(const char *key) {
     struct Assoc *assoc = calloc(1, sizeof(struct Assoc));
-    assoc->key = strdup(key);
-    return assoc;
+    assoc->key = strdup(key);  // key might be a temporary string
+    return assoc;  // calloc() clears the value to zeroes
 }
 
 // 3a) define struct Map here
