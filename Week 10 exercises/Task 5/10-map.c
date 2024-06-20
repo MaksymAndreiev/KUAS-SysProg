@@ -117,14 +117,14 @@ int main(int argc, char **argv) {
 
     // 4. implement and test Map_find()
 
-//    struct Assoc *empty = Map_find(map, "");
-//    assert(empty == Map_find(map, ""));
-//    struct Assoc *hello = Map_find(map, "hello");
-//    assert(hello == Map_find(map, "hello"));
-//    struct Assoc *left = Map_find(map, "left");
-//    assert(left == Map_find(map, "left"));
-//    struct Assoc *low = Map_find(map, "low");
-//    assert(low == Map_find(map, "low"));
+    struct Assoc *empty = Map_find(map, "");
+    assert(empty == Map_find(map, ""));
+    struct Assoc *hello = Map_find(map, "hello");
+    assert(hello == Map_find(map, "hello"));
+    struct Assoc *left = Map_find(map, "left");
+    assert(left == Map_find(map, "left"));
+    struct Assoc *low = Map_find(map, "low");
+    assert(low == Map_find(map, "low"));
 
     // 5. test Assoc with integer value
 
